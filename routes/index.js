@@ -9,4 +9,10 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   res.send(req.body.name)
 });
+router.get('/hello', function(req, res) {
+  res.send("Hello World")
+});
+router.post('/hello', function(req, res) {
+  res.json(req.body);
+});
 module.exports = router;
